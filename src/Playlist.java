@@ -20,14 +20,14 @@ public class Playlist {
             System.out.println("Hoeveel tracks staan er op de playlist? Vul een getal van 2 tot en met 20 in.");
             try {
                 tracks = Integer.parseInt(scanner.nextLine());
-                if (tracks <= 2 || tracks >= 20) {
+                if (tracks < 2 || tracks > 20) {
                     System.out.println("Dit is geen getal van 2 tot en met 20.");
                 }
                 validInput = true;
             } catch (IllegalArgumentException e) {
                 System.out.println("Vul eem getal in.");
             }
-        } while (!validInput || tracks <= 2 || tracks >= 20);
+        } while (!validInput || tracks < 2 || tracks > 20);
     }
 
     // function where the user can enter the title of the tracks
